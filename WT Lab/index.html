@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Study Notes - Topper Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --blue-pen: #1e3a8a;
+            --red-marker: #dc2626;
+            --highlighter: rgba(254, 240, 138, 0.7);
+            --paper-bg: #fefcf0;
+            --line-color: #e5e7eb;
+            --margin-color: #fca5a5;
+        }
+
+        body {
+            background-color: #d1d5db;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .notebook-page {
+            width: 800px;
+            min-height: 1100px;
+            background-color: var(--paper-bg);
+            background-image: 
+                linear-gradient(var(--line-color) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 79px, var(--margin-color) 1px, var(--margin-color) 2px, transparent 81px);
+            background-size: 100% 28px, 100% 100%;
+            padding: 40px 40px 40px 100px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            font-family: 'Patrick Hand', cursive;
+            line-height: 28px;
+            color: var(--blue-pen);
+            overflow: hidden;
+        }
+
+        .heading {
+            font-family: 'Gochi Hand', cursive;
+            color: var(--red-marker);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 3px double var(--red-marker);
+            display: inline-block;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .sub-heading {
+            color: var(--red-marker);
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .highlight {
+            background-color: var(--highlighter);
+            padding: 0 4px;
+            border-radius: 2px;
+        }
+
+        .important-circle {
+            border: 2px solid var(--red-marker);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            padding: 2px 8px;
+            display: inline-block;
+        }
+
+        .exam-tip {
+            border: 2px dashed #059669;
+            padding: 10px;
+            background: #ecfdf5;
+            transform: rotate(-1deg);
+            max-width: 200px;
+            font-size: 0.9rem;
+            color: #065f46;
+            margin: 10px 0;
+        }
+
+        .doodle {
+            position: absolute;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .diagram {
+            float: right;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: white;
+            margin: 10px;
+            max-width: 250px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .day-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 999px;
+            font-family: 'Architects Daughter', cursive;
+            transform: rotate(5deg);
+        }
+
+        ul {
+            list-style-type: "— ";
+            padding-left: 20px;
+        }
+
+        .code-snippet {
+            font-family: 'Architects Daughter', cursive;
+            background: #f3f4f6;
+            padding: 5px 10px;
+            border-left: 4px solid #6b7280;
+            margin: 5px 0;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1 -->
+    <div class="notebook-page">
+        <div class="day-tag">Day 1 - 2</div>
+        <div class="heading">Intro to Programming</div>
+        
+        <svg class="doodle" style="top:50px; right:100px" width="50" height="50">
+            <path d="M10 10 Q 25 5, 40 10 T 40 40 Q 25 45, 10 40 T 10 10" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+            <text x="12" y="30" font-size="10">💻</text>
+        </svg>
+
+        <p class="sub-heading">Definition</p>
+        <p>A <span class="highlight">Programming Language</span> is a formal language used to communicate with computers.</p>
+
+        <p class="sub-heading">Types of Languages</p>
+        <ul>
+            <li><span class="important-circle">High-Level Language:</span> Software oriented. Used in <span class="highlight">Web, App, ML, Data Science</span>. Examples: C++, Java, Python.</li>
+            <li><span class="important-circle">Low-Level Language:</span> Hardware oriented. Used in <span class="highlight">keyboards, washing machines</span>. Examples: Machine & Assembly lang.</li>
+        </ul>
+
+        <div class="diagram">
+            <p style="color:red">App Ecosystem</p>
+            <div class="border-2 border-dashed border-blue-900 p-2">
+                Web App (Browser)<br>↓<br>
+                Mobile App (Native/Hybrid)<br>↓<br>
+                Desktop App (Standalone)
+            </div>
+            <p>Connection flow</p>
+        </div>
+
+        <p class="sub-heading">Applications</p>
+        <ul>
+            <li><span class="highlight">Web Apps:</span> Run in browsers (Chrome/Safari). Need Internet. Platform Independent.</li>
+            <li><span class="highlight">Mobile Apps:</span> 
+                <br>a) <span class="important-circle">Web:</span> URL based. 
+                <br>b) <span class="important-circle">Native:</span> Platform dependent (Playstore). 
+                <br>c) <span class="important-circle">Hybrid:</span> Both (WhatsApp, FB).</li>
+            <li><span class="highlight">Desktop Apps:</span> Offline usage. (Excel, MS Word).</li>
+        </ul>
+
+        <div class="exam-tip">
+            <strong>Memory Trick:</strong><br>
+            Hybrid = Web + Native<br>
+            (Cross-platform magic!)
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="notebook-page">
+        <div class="day-tag">Day 3 - 4</div>
+        <div class="heading">Web Architecture & Python</div>
+        
+        <p class="sub-heading">Website Parts</p>
+        <ul>
+            <li><span class="highlight">Frontend:</span> User visible part. (UI). Uses: HTML, CSS, JS, React.</li>
+            <li><span class="highlight">Backend:</span> Server-side logic. Uses: Python, Node.js, PHP.</li>
+            <li><span class="highlight">Database:</span> Structured data storage. Uses: <span class="important-circle">SQL (MySQL, PgSQL)</span>.</li>
+        </ul>
+
+        <p class="sub-heading">Python: The 5W's</p>
+        <p>Python is a <span class="highlight">High-level Interpreted</span> language.</p>
+        <ul>
+            <li><span class="important-circle">Who:</span> <span class="highlight">Guido Van Rossum</span></li>
+            <li><span class="important-circle">When:</span> <span class="highlight">Feb 1991</span></li>
+            <li><span class="important-circle">Where:</span> Netherlands</li>
+            <li><span class="important-circle">Why:</span> Easy to read, huge ecosystem.</li>
+        </ul>
+
+        <div class="exam-tip" style="background: #fff4f4;">
+            <strong>Common Mistake:</strong><br>
+            Thinking Python is compiled. It is <u>Interpreted</u> (line-by-line)!
+        </div>
+
+        <div class="heading" style="font-size: 1.5rem;">Comparison Snippets</div>
+        <p>Python:</p>
+        <div class="code-snippet">print("Ansh Thakur!")</div>
+        <p>Java:</p>
+        <div class="code-snippet">System.out.println("Ansh Thakur");</div>
+
+        <div class="diagram" style="float:left; margin-right: 20px;">
+            <p>Debugging Flow</p>
+            <p>Find Error ➔ Fix ➔ Run</p>
+        </div>
+
+        <p class="sub-heading">Language Types</p>
+        <ul>
+            <li><span class="highlight">Interpreted:</span> Line by line. Easy to debug. (Python).</li>
+            <li><span class="highlight">Compiled:</span> Entire code at once. Fast. (Java/C++).</li>
+            <li><span class="highlight">Hybrid:</span> Both. (JavaScript).</li>
+        </ul>
+        <svg class="doodle" style="bottom:20px; right:50px" width="60" height="60">
+            <circle cx="30" cy="30" r="20" fill="none" stroke="red" stroke-width="1"/>
+            <text x="22" y="38" font-size="20">🐍</text>
+        </svg>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="notebook-page">
+        <div class="day-tag">Day 5 - 8</div>
+        <div class="heading">Variables & Operators</div>
+        
+        <p class="sub-heading">Variables</p>
+        <p>A container to store values. (Like a <span class="highlight">Water Bottle</span>).</p>
+        <p class="important-circle">Rules for Variables:</p>
+        <ul>
+            <li>Must start with <span class="highlight">Letter</span> or <span class="highlight">Underscore (_)</span>.</li>
+            <li>No spaces or special chars (!, @, #).</li>
+            <li>Case-Sensitive (name != NAME).</li>
+            <li>Keywords cannot be used.</li>
+        </ul>
+
+        <p class="sub-heading">Arithmetic Operators</p>
+        <ul>
+            <li><span class="highlight">/</span> Division (Float)</li>
+            <li><span class="highlight">//</span> Floor Division (Int)</li>
+            <li><span class="highlight">%</span> Modulus (Remainder)</li>
+            <li><span class="highlight">**</span> Exponent (Power)</li>
+        </ul>
+
+        <div class="diagram">
+            <p>Logic Gates (AND)</p>
+            <table class="border-collapse border border-slate-400 text-xs">
+                <tr><th class="border border-slate-300">A</th><th class="border border-slate-300">B</th><th class="border border-slate-300">Y</th></tr>
+                <tr><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>1</td><td>1</td></tr>
+            </table>
+        </div>
+
+        <p class="sub-heading">Logical Operators</p>
+        <ul>
+            <li><span class="highlight">AND:</span> True if both true.</li>
+            <li><span class="highlight">OR:</span> True if at least one true.</li>
+            <li><span class="highlight">NOT:</span> Reverse the state.</li>
+        </ul>
+
+        <p class="sub-heading">Bitwise Basics</p>
+        <p>Performs operations on <span class="important-circle">Binary numbers</span>.</p>
+        <p>Ex: <span class="highlight">5 & 6</span> → Binary 0101 & 0110 = 0100 (which is 4).</p>
+
+        <div class="exam-tip">
+            <strong>Exam Tip:</strong><br>
+            Input() function always returns a <span class="highlight">STRING</span> by default. Use <u>int()</u> to convert!
+        </div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="notebook-page">
+        <div class="day-tag">Day 11 - 17</div>
+        <div class="heading">Strings & Conditionals</div>
+        
+        <p class="sub-heading">Strings & Slicing</p>
+        <p>Sequence of characters. Slicing formula: <span class="highlight">string[start : end : gap]</span></p>
+        <p>Note: <span class="important-circle">Ending point is ALWAYS excluded!</span></p>
+        
+        <div class="code-snippet">
+            lang = "Programming"<br>
+            print(lang[0:4]) # Output: Prog
+        </div>
+
+        <p class="sub-heading">String Methods</p>
+        <ul>
+            <li><span class="highlight">len():</span> Find length.</li>
+            <li><span class="highlight">strip():</span> Remove extra spaces.</li>
+            <li><span class="highlight">replace():</span> Swap substrings.</li>
+        </ul>
+
+        <p class="sub-heading">Lists</p>
+        <p>Store multiple data types: <span class="highlight">[1, "Ravi", True]</span></p>
+        <ul>
+            <li>Positive Index: Starts at 0.</li>
+            <li>Negative Index: Starts at -1 (from right).</li>
+        </ul>
+
+        <p class="sub-heading">Conditional Statements</p>
+        <p>Uses <span class="highlight">if</span> and <span class="highlight">else</span>.</p>
+        <p class="important-circle">Indentation is Backbone!</p>
+        <p>Python uses <span class="highlight">Colon (:)</span> to define the body.</p>
+
+        <div class="code-snippet">
+            if a > b:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("A is greater")<br>
+            else:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("B is greater")
+        </div>
+
+        <div class="exam-tip">
+            <strong>Memory Trick:</strong><br>
+            Gap = n-1. <br>
+            If gap = 2, skip 1 element.<br>
+            If gap = 3, skip 2 elements.
+        </div>
+
+        <svg class="doodle" style="bottom:40px; left:20px" width="80" height="40">
+            <path d="M0 20 Q 20 0, 40 20 T 80 20" fill="none" stroke="blue" stroke-width="1"/>
+            <text x="10" y="35" font-size="10">Keep Practicing!</text>
+        </svg>
+    </div>
+
+</body>
+</html>
