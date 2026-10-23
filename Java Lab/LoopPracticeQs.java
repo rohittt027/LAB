@@ -59,27 +59,58 @@
 
 //  Write a program to find the factorial of any number entered by the user.
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class LoopPracticeQs {
+// public class LoopPracticeQs {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+//         Scanner sc = new Scanner(System.in);
 
-        int num;
-        int fact = 1;
+//         int num;
+//         int fact = 1;
 
-        System.out.print("enter any positive integer :");
-        num = sc.nextInt();
+//         System.out.print("enter any positive integer :");
+//         num = sc.nextInt();
 
-        for (int i = 1; i <= num; i++) {
-            fact *= i;
+//         for (int i = 1; i <= num; i++) {
+//             fact *= i;
 
-        }
+//         }
 
-        System.out.println("factorial number = " + fact);
+//         System.out.println("factorial number = " + fact);
 
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
+
+// -------------------------------------------------------------------------------------------------------
+
+// Multiplication Table of a Number :-
+
+// import java.util.Scanner;
+
+// public class LoopPracticeQs {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int num;
+//         int multi = 1;
+
+//         System.out.print("enter your number :");
+//         num = sc.nextInt();
+
+//         for (int i = 1; i <= 10; i++) {
+//             multi = num * i;
+//             System.out.println(num + " x " + i + " = " + multi);
+
+//         }
+//         sc.close();
+
+//     }
+// }
+
+// -------------------------------------------------------------------------------------------------------
+
+// Question 4 : Write a program to print the multiplication table of a number N, entered by the user.
