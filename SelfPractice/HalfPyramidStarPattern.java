@@ -1,0 +1,16 @@
+package SelfPractice;
+
+public class HalfPyramidStarPattern {
+    public static void main(String[] args) {
+        int num = 4;
+        for (int i = 1; i <= num; i++) {
+            for (int j = 1; j <= num-1; j++) {
+                System.out.print(num);
+                // num++;
+
+            }
+            System.out.println();
+        }
+    }
+
+}
