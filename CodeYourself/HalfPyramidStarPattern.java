@@ -1,5 +1,3 @@
-package SelfPractice;
-
 public class HalfPyramidStarPattern {
     public static void main(String[] args) {
         int num = 4;

@@ -1,5 +1,3 @@
-package SelfPractice;
-
 public class TLTStarPattern {
     public static void main(String[] args) {
 
