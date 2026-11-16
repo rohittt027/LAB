@@ -1,65 +1,65 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class ATMSimulator {
-    public static void main(String[] args) {
+// public class ATMSimulator {
+//     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+//         Scanner sc = new Scanner(System.in);
 
-        int correctPin = 1234;
+//         int correctPin = 1234;
 
-        System.out.print("Enter your PIN: ");
-        int enteredPin = sc.nextInt();
+//         System.out.print("Enter your PIN: ");
+//         int enteredPin = sc.nextInt();
 
-        if (enteredPin == correctPin) {
+//         if (enteredPin == correctPin) {
 
-            System.out.println("Access Granted!");
+//             System.out.println("Access Granted!");
 
-            boolean isRunning = true;
+//             boolean isRunning = true;
 
-            while (isRunning) {
+//             while (isRunning) {
 
-                System.out.println("\n===== ATM MENU =====");
-                System.out.println("1. Check Balance");
-                System.out.println("2. Deposit Money");
-                System.out.println("3. Withdraw Money");
-                System.out.println("4. Change PIN");
-                System.out.println("5. Exit");
+//                 System.out.println("\n===== ATM MENU =====");
+//                 System.out.println("1. Check Balance");
+//                 System.out.println("2. Deposit Money");
+//                 System.out.println("3. Withdraw Money");
+//                 System.out.println("4. Change PIN");
+//                 System.out.println("5. Exit");
 
-                System.out.print("Enter your choice: ");
-                int choice = sc.nextInt();
+//                 System.out.print("Enter your choice: ");
+//                 int choice = sc.nextInt();
 
-                switch (choice) {
+//                 switch (choice) {
 
-                    case 1:
-                        System.out.println("You selected Check Balance!");
-                        break;
+//                     case 1:
+//                         System.out.println("You selected Check Balance!");
+//                         break;
 
-                    case 2:
-                        System.out.println("You selected Deposit Money!");
-                        break;
+//                     case 2:
+//                         System.out.println("You selected Deposit Money!");
+//                         break;
 
-                    case 3:
-                        System.out.println("You selected Withdraw Money!");
-                        break;
+//                     case 3:
+//                         System.out.println("You selected Withdraw Money!");
+//                         break;
 
-                    case 4:
-                        System.out.println("You selected Change PIN!");
-                        break;
+//                     case 4:
+//                         System.out.println("You selected Change PIN!");
+//                         break;
 
-                    case 5:
-                        System.out.println("Thank you for using ATM!");
-                        isRunning = false;
-                        break;
+//                     case 5:
+//                         System.out.println("Thank you for using ATM!");
+//                         isRunning = false;
+//                         break;
 
-                    default:
-                        System.out.println("Invalid Choice!");
-                }
-            }
+//                     default:
+//                         System.out.println("Invalid Choice!");
+//                 }
+//             }
 
-        } else {
-            System.out.println("Incorrect PIN!");
-        }
+//         } else {
+//             System.out.println("Incorrect PIN!");
+//         }
 
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
